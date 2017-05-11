@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fantasticView = FantasticView(frame: view.bounds)
+        let fantasticView = TMFantasticView(frame: view.bounds)
         view.addSubview(fantasticView)
     }
 
