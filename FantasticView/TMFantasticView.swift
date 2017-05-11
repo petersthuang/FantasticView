@@ -13,7 +13,7 @@ public class TMFantasticView: UIView {
     let colors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple]
     var colorCounter = 0
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         
         let timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) {
