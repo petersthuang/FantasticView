@@ -13,8 +13,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fantasticView = TMFantasticView(frame: view.bounds)
+        let fantasticView = TMFantasticView(frame: .zero)
         view.addSubview(fantasticView)
+        fantasticView.autoPinEdgesToSuperviewEdges(with: .zero)
+        
+        let profileView = ProfileView(frame: .zero)
+        view.addSubview(profileView)
+        profileView.autoPinEdgesToSuperviewEdges(with: .zero)
     }
 
     override func didReceiveMemoryWarning() {

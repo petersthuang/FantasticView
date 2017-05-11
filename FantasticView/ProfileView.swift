@@ -47,6 +47,20 @@ class ProfileView: UIView {
     
     override func updateConstraints() {
         if shouldSetupContraints {
+            
+            let edgesInset: CGFloat = 10.0
+            
+            banner.autoPinEdgesToSuperviewEdges(with: .zero, excludingEdge: .bottom)
+            banner.autoSetDimension(.height, toSize: 150)
+            
+            profilePic.autoPinEdge(toSuperviewEdge: .left, withInset: edgesInset)
+            profilePic.autoSetDimensions(to: CGSize(width: 100, height: 100))
+            profilePic.centerYAnchor.constraint(equalTo: banner.bottomAnchor).isActive = true
+            
+            segmentedControl.autoPinEdge(toSuperviewEdge: .bottom, withInset: edgesInset)
+            segmentedControl.autoPinEdge(toSuperviewEdge: .left, withInset: edgesInset)
+            segmentedControl.autoPinEdge(toSuperviewEdge: .right, withInset: edgesInset)
+            
             shouldSetupContraints = false
         }
         super.updateConstraints()
