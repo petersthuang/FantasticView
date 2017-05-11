@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FantasticView: UIView {
+public class TMFantasticView: UIView {
 
     let colors: [UIColor] = [.red, .orange, .yellow, .green, .blue, .purple]
     var colorCounter = 0
@@ -26,7 +26,7 @@ class FantasticView: UIView {
         timer.fire()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
 }
